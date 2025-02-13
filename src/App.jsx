@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaSearch, FaAmazon, FaStar, FaTag } from 'react-icons/fa';
+
 import { SiFlipkart } from 'react-icons/si';
 import { mockProducts } from './mockData';
 import Header from './components/Header';
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="price-comparison-app min-vh-100 d-flex flex-column">
       <Header />
-      
+
       <main className="flex-grow-1 py-4">
         {/* Search Bar */}
         <div className="container mb-4">
@@ -41,17 +42,18 @@ function App() {
             <div className="col-md-6 mb-4">
               <div className="platform-column p-3 rounded">
                 <h2 className="text-white mb-4">
-                  <FaAmazon className="text-amazon me-2" /> Amazon
+                  <FaAmazon className="me-2 amazon-logo" /> Amazon
                 </h2>
-                
+
+
                 {mockProducts.amazon.map(product => (
                   <div key={product.id} className="card product-card mb-3">
                     <div className="row g-0">
                       <div className="col-4">
-                        <img 
-                          src={product.image} 
-                          className="img-fluid rounded-start product-image" 
-                          alt={product.title} 
+                        <img
+                          src={product.image}
+                          className="img-fluid rounded-start product-image"
+                          alt={product.title}
                         />
                       </div>
                       <div className="col-8">
@@ -62,16 +64,15 @@ function App() {
                             <span className="ms-1">4.5</span>
                             <span className="text-muted ms-2">(2.5k reviews)</span>
                           </div>
-                          <div className={`price-badge ${
-                            product.price <= mockProducts.flipkart.find(p => p.id === product.id).price 
-                            ? 'better-price' 
+                          <div className={`price-badge ${product.price <= mockProducts.flipkart.find(p => p.id === product.id).price
+                            ? 'better-price'
                             : 'higher-price'
-                          }`}>
+                            }`}>
                             <FaTag className="me-1" />
                             ${product.price}
                           </div>
-                          <a 
-                            href={product.url} 
+                          <a
+                            href={product.url}
                             className="btn btn-amazon w-100 mt-2 text-bold"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -90,17 +91,17 @@ function App() {
             <div className="col-md-6 mb-4">
               <div className="platform-column p-3 rounded">
                 <h2 className="text-white mb-4">
-                  <SiFlipkart className="text-flipkart me-2" /> Flipkart
+                  <SiFlipkart className="me-2 flipkart-logo" /> Flipkart
                 </h2>
-                
+
                 {mockProducts.flipkart.map(product => (
                   <div key={product.id} className="card product-card mb-3">
                     <div className="row g-0">
                       <div className="col-4">
-                        <img 
-                          src={product.image} 
-                          className="img-fluid rounded-start product-image" 
-                          alt={product.title} 
+                        <img
+                          src={product.image}
+                          className="img-fluid rounded-start product-image"
+                          alt={product.title}
                         />
                       </div>
                       <div className="col-8">
@@ -111,16 +112,15 @@ function App() {
                             <span className="ms-1">4.3</span>
                             <span className="text-muted ms-2">(2.1k reviews)</span>
                           </div>
-                          <div className={`price-badge ${
-                            product.price <= mockProducts.amazon.find(p => p.id === product.id).price 
-                            ? 'better-price' 
+                          <div className={`price-badge ${product.price <= mockProducts.amazon.find(p => p.id === product.id).price
+                            ? 'better-price'
                             : 'higher-price'
-                          }`}>
+                            }`}>
                             <FaTag className="me-1" />
                             ${product.price}
                           </div>
-                          <a 
-                            href={product.url} 
+                          <a
+                            href={product.url}
                             className="btn btn-flipkart w-100 mt-2"
                             target="_blank"
                             rel="noopener noreferrer"

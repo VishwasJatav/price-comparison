@@ -1,5 +1,6 @@
 import { FaShoppingCart } from 'react-icons/fa';
 
+
 function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{

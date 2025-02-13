@@ -144,4 +144,60 @@
   .card-body {
     padding: 1rem;
   }
+  .amazon-logo{
+    color: #ffc107 !important;
+    
+  }
+}
+/* Category Styles */
+.categories-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.category-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.category-icon {
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.category-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2d3436;
+}
+
+.category-card p {
+  color: #636e72;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .category-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .category-card h3 {
+    font-size: 1rem;
+  }
 }
