@@ -1,17 +1,18 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
-
 
 function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{
-        backgroundColor: "transparent",
-        backdropFilter: "blur(10px)",
+      backgroundColor: "transparent",
+      backdropFilter: "blur(10px)",
     }}>
       <div className="container">
-        <a className="navbar-brand" href="/">
+        <Link to="/" className="navbar-brand">
           <FaShoppingCart className="me-2" />
           Price Comparison
-        </a>
+        </Link>
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -23,13 +24,19 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link text-white text-decoration-none fw-bold  " href="/">Home</a>
+              <Link className="nav-link text-white text-decoration-none fw-bold" to="/">
+                Home
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white text-decoration-none fw-bold " href="/categories">Categories</a>
+              <Link className="nav-link text-white text-decoration-none fw-bold" to="/categories">
+                Categories
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white text-decoration-none fw-bold " href="/deals">Today's Deals</a>
+              <Link className="nav-link text-white text-decoration-none fw-bold" to="/TodaysDeals">
+                Today's Deals
+              </Link>
             </li>
           </ul>
         </div>

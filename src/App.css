@@ -201,3 +201,189 @@
     font-size: 1rem;
   }
 }
+/* Deals Page Styles */
+.deal-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4757;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 1;
+}
+
+.platform-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.platform-badge .text-amazon,
+.platform-badge .text-flipkart {
+  font-size: 1.2rem;
+}
+
+.platform-badge span {
+  font-weight: 500;
+  color: #333;
+}
+
+.deal-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.original-price {
+  font-size: 0.9rem;
+  color: #aaa !important;
+}
+
+.discounted-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+.deal-timer {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.text-amazon {
+  color: #ff9900;
+}
+
+.text-flipkart {
+  color: #2874f0;
+}
+
+.btn-amazon {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-amazon:hover {
+  background-color: #e68a00;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-flipkart {
+  background-color: #2874f0;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-flipkart:hover {
+  background-color: #1e5bb6;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Rating styles */
+.text-warning {
+  color: #ffc107 !important;
+}
+
+/* Card body styles */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Price section styles */
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Reviews count style */
+.text-muted {
+  color: #aaa !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .deal-card {
+    margin-bottom: 1rem;
+  }
+
+  .deal-image {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .platform-badge,
+  .discount-badge {
+    font-size: 0.8rem;
+  }
+
+  .discounted-price {
+    font-size: 1.1rem;
+  }
+}
+
+/* Container padding */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Grid spacing */
+.row {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.col-md-6,
+.col-lg-4 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}

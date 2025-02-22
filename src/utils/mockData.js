@@ -1,9 +1,6 @@
-import amazonIphone16ProMax from "./components/assets/ProductImages/Iphone16.png";
-import flipkartIphone16ProMax from "./components/assets/ProductImages/image1.png";
-import samsungGalaxyS22Ultra from "./components/assets/ProductImages/SamsungImage.png";
-import flipkartSamsungGalaxyS22Ultra from "./components/assets/ProductImages/SamsungImage.png";
-
-
+import amazonIphone16ProMax from '../components/assets/ProductImages/Iphone16.png';
+import flipkartIphone16ProMax from '../components/assets/ProductImages/image1.png';
+import samsungGalaxyS22Ultra from '../components/assets/ProductImages/SamsungImage.png';
 
 export const mockProducts = {
     amazon: [
@@ -34,7 +31,7 @@ export const mockProducts = {
             id: 2,
             title: "Samsung Galaxy S22 Ultra 5G (256GB) - Phantom Black",
             price: "₹84,500",
-            image: flipkartSamsungGalaxyS22Ultra,
+            image: samsungGalaxyS22Ultra,
             url: "https://shorturl.at/D0Ubt"
         }
     ]
