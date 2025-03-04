@@ -1,0 +1,114 @@
+.about-page {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    min-height: 100vh;
+  }
+  
+  .about-container {
+    padding: 3rem 0;
+  }
+  
+  .about-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-section h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-section h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+  }
+  
+  .about-text {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .platform-highlight {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .amazon-text {
+    color: #ff9900;
+  }
+  
+  .flipkart-text {
+    color: #2874f0;
+  }
+  
+  .myntra-text {
+    color: #ff3f6c;
+  }
+  
+  .paytm-text {
+    color: #00b9f5;
+  }
+  
+  .download-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+  }
+  
+  .download-section p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .app-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+  }
+  
+  .android-badge {
+    background-color: #a4c639;
+    color: white;
+  }
+  
+  .ios-badge {
+    background-color: #000000;
+    color: white;
+  }
+  
+  .app-badge:hover {
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 1.5rem;
+    }
+  
+    .about-section h2 {
+      font-size: 2rem;
+    }
+  
+    .about-section h3 {
+      font-size: 1.5rem;
+    }
+  
+    .about-text {
+      font-size: 1rem;
+    }
+  }

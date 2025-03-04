@@ -1,0 +1,61 @@
+.saved-items-page {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  }
+  
+  .saved-item-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1rem;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    z-index: 1;
+    padding: 5px;
+    transition: transform 0.2s;
+  }
+  
+  .remove-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .btn-amazon {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+  }
+  
+  .btn-amazon:hover {
+    background-color: #e68a00;
+    color: white;
+  }
+  
+  .btn-flipkart {
+    background-color: #2874f0;
+    color: white;
+    border: none;
+  }
+  
+  .btn-flipkart:hover {
+    background-color: #2361c7;
+    color: white;
+  }
+  
+  .platform {
+    color: #cccccc;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #4CAF50;
+  }

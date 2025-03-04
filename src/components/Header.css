@@ -1,0 +1,124 @@
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s ease; /* Make transitions smoother */
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  box-shadow: none; /* No shadow initially */
+}
+
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 12, 41, 0.95);
+  backdrop-filter: blur(12px); /* Apply blur when sticky */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15); /* Softer shadow when sticky */
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease; /* Smooth background and shadow transitions */
+}
+
+/* Add some smoothness for the transform effect when scrolling */
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-visible {
+  transform: translateY(0);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Add margin to the body to prevent content from hiding behind fixed navbar */
+body {
+  margin-top: 80px; /* Adjust this value based on your navbar height */
+}
+
+.search-bar {
+  border-radius: 25px;
+  overflow: hidden;
+  width: 500px; /* Added fixed width */
+  max-width: 100%;
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.search-bar input {
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%; /* Ensure input takes full width */
+}
+
+.search-bar .btn {
+  border: none;
+  padding: 0.5rem 1.5rem;
+  background: #4CAF50;
+  min-width: 50px; /* Added minimum width for button */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.search-bar .btn:hover {
+  background: #45a049;
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #4CAF50;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.nav-link:hover {
+  color: #4CAF50; /* Smooth hover color */
+}
+
+.badge {
+  font-size: 0.6rem;
+  padding: 0.25rem 0.4rem;
+}
+
+.navbar .container {
+  padding: 0.5rem 1rem;
+  transition: padding 0.3s ease; /* Smooth padding transition */
+}
+
+.navbar-nav {
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.hover-icon {
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.hover-icon:hover {
+  transform: scale(1.1);
+}
