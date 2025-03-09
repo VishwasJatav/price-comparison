@@ -36,19 +36,19 @@ const HomePage = () => {
     }
 
     if (filters.rating) {
-      amazonFiltered = amazonFiltered.filter(product => 
+      amazonFiltered = amazonFiltered.filter(product =>
         parseFloat(product.rating || 0) >= filters.rating
       );
-      flipkartFiltered = flipkartFiltered.filter(product => 
+      flipkartFiltered = flipkartFiltered.filter(product =>
         parseFloat(product.rating || 0) >= filters.rating
       );
     }
 
     if (filters.category && filters.category !== 'all') {
-      amazonFiltered = amazonFiltered.filter(product => 
+      amazonFiltered = amazonFiltered.filter(product =>
         product.category === filters.category
       );
-      flipkartFiltered = flipkartFiltered.filter(product => 
+      flipkartFiltered = flipkartFiltered.filter(product =>
         product.category === filters.category
       );
     }
@@ -102,9 +102,9 @@ const HomePage = () => {
                             <div className="card-body">
                               <div className="d-flex justify-content-between align-items-start">
                                 <h5 className="card-title text-truncate">{product.title}</h5>
-                                <button 
+                                <button
                                   className={`btn btn-sm ${isItemSaved(product.id) ? 'btn-danger' : 'btn-outline-danger'}`}
-                                  onClick={() => isItemSaved(product.id) 
+                                  onClick={() => isItemSaved(product.id)
                                     ? removeFromSavedItems(product.id)
                                     : addToSavedItems(product)
                                   }
@@ -157,9 +157,9 @@ const HomePage = () => {
                             <div className="card-body">
                               <div className="d-flex justify-content-between align-items-start">
                                 <h5 className="card-title text-truncate">{product.title}</h5>
-                                <button 
+                                <button
                                   className={`btn btn-sm ${isItemSaved(product.id) ? 'btn-danger' : 'btn-outline-danger'}`}
-                                  onClick={() => isItemSaved(product.id) 
+                                  onClick={() => isItemSaved(product.id)
                                     ? removeFromSavedItems(product.id)
                                     : addToSavedItems(product)
                                   }
@@ -196,37 +196,6 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* About Section */}
-        <div className="container mt-5 mb-4">
-          <div className="about-section text-white p-4 rounded">
-            <h2 className="mb-4 text-center">About PriceCompare</h2>
-            <div className="row">
-              <div className="col-md-8 mx-auto">
-                <p className="lead mb-4 text-center">
-                  India's Leading Price Comparison Platform
-                </p>
-                <div className="features-grid mb-4">
-                  <div className="text-center mb-3">
-                    <h5>Why Choose PriceCompare?</h5>
-                    <ul className="list-unstyled">
-                      <li>✓ Compare prices across major e-commerce platforms</li>
-                      <li>✓ Real-time price tracking and alerts</li>
-                      <li>✓ Trusted by millions of smart shoppers</li>
-                      <li>✓ Save money on every purchase</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="popular-searches text-center">
-                  <p className="mb-2">Popular Searches:</p>
-                  <span className="badge bg-light text-dark m-1">Smartphones</span>
-                  <span className="badge bg-light text-dark m-1">Laptops</span>
-                  <span className="badge bg-light text-dark m-1">Electronics</span>
-                  <span className="badge bg-light text-dark m-1">Home Appliances</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
       <Footer />
       <PriceAlert />

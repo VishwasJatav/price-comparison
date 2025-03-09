@@ -38,7 +38,7 @@ function Header() {
         {/* Logo */}
         <Link to="/" className="navbar-brand fs-2 text-white fw-bold underline-hover d-flex align-items-center me-4">
           <BsCart3 className="me-2 fs-1" style={{ color: '#4CAF50' }} />
-          <span>PriceCompare</span>
+          <span>PriceHunt</span>
         </Link>
 
         {/* Navigation Links */}
